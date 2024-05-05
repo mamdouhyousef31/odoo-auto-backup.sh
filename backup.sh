@@ -12,7 +12,7 @@ remove_after="15" # days
 
 for db in ${dbs[@]}; do
   timestamp=$(date +"%Y-%m-%d_%H-%M-%N")
-  tmp_path="$tmp_path_/$db/$timestamp"
+  tmp_path="$tmp_path/$db/$timestamp"
   file_name="$backupdir/$db/${db}_$timestamp.zip"
       echo "sudo -u postgres mkdir -p ${tmp_path}"
   sudo -u postgres mkdir -p $tmp_path
